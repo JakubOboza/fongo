@@ -12,6 +12,10 @@ module Fongo
     FongoConfig.new(&block)
   end
 
+  def self.deploy(&block)
+    self.config(&block)
+  end
+
   class FongoConfig
     include Fongo::Shard
 

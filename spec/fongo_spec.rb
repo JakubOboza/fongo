@@ -21,10 +21,16 @@ describe "Fongo" do
 
        config.add_shard :host => "localhost",
                         :port => "27020",
-                        :dpath => "/tmp/db/shards/a"
+                        :dbpath => "/tmp/db/shards/a"
 
       end.should be_kind_of(Fongo::FongoConfig)
 
+    end
+
+    it "should have deploy alias " do
+      Fongo.deploy do |config|
+        config.add_shard :host => "localhost", :port => "27020"
+      end.should be_kind_of(Fongo::FongoConfig)
     end
 
   end
