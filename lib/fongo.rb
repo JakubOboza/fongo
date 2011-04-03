@@ -20,7 +20,7 @@ module Fongo
     include Fongo::Shard
 
     def initialize(&block)
-      yield(self.class) if block_given?
+      yield(self) if block_given?
     end
 
   end

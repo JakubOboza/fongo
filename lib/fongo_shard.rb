@@ -7,9 +7,10 @@ module Fongo
   end
 
   module ClassMethods
-    def add_shard(opts = {})
-      Fongo::Shard::FongoShard.new(opts).deploy
-    end
+  end
+
+  def add_shard(opts = {})
+    Fongo::Shard::FongoShard.new(opts).deploy
   end
 
   class FongoShard

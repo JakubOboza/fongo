@@ -5,4 +5,4 @@ README.txt
 Rakefile
 bin/fongo
 lib/fongo.rb
-test/test_fongo.rb
+
